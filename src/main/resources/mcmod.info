@@ -1,7 +1,7 @@
 [
 {
-  "modid": "Model200",
-  "name": "Model200",
+  "modid": "model200",
+  "name": "model200",
   "description": "200 Model Implementation",
   "version": "${version}",
   "mcversion": "${mcversion}",
