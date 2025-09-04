@@ -10,30 +10,32 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
 @Mod(modid = Application.MODID, version = Application.VERSION)
-public class Application
-{
+public class Application {
+
+    @Mod.Instance
+    public static Application instance;
+
     public static final String MODID = "model200";
+
     public static final String VERSION = "1.0";
-    
-    @EventHandler
+
+    public Application() {
+        instance = this;
+    }
+
+    @Mod.EventHandler
     public void init(FMLInitializationEvent event){
-
-        TileEntitySpecialRenderer<EntitySheep> entitySheepTileEntitySpecialRenderer = new TileEntitySpecialRenderer<EntitySheep>() {
-            @Override
-            public void renderTileEntityAt(EntitySheep te, double x, double y, double z, float partialTicks, int destroyStage) {
-
-            }
-        };
-        EntityRenderer entityRenderer = new EntityRenderer(null, null) {
-            @Override
-            public void renderWorld(float partialTicks, long finishTimeNano) {
-
-            }
-        };
-        OBJLoader.instance.addDomain(MODID);
         ModelResourceLocation sheepModelLocation = new ModelResourceLocation("assets/model200/models/sheep.obj");
 
+        OBJLoader.instance.addDomain(MODID);
+        OBJLoader.instance.accepts(sheepModelLocation);
     }
+
+
+
+
+
+
 
 
 }
