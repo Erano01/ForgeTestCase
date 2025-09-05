@@ -9,6 +9,8 @@ public interface Proxy {
 
     void preInit();
 
+    void postInit();
+
     boolean isSinglePlayer();
 
     boolean isDedicatedServer();

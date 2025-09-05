@@ -32,6 +32,8 @@ public class Application {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
+        commonProxy.init();
+
         ModelResourceLocation sheepModelLocation = new ModelResourceLocation("assets/model200/models/sheep.obj");
 
         OBJLoader.instance.addDomain(MODID);
@@ -40,12 +42,12 @@ public class Application {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-
+        commonProxy.preInit();
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
+        commonProxy.postInit();
     }
 
 

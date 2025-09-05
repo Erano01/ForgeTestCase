@@ -19,6 +19,11 @@ public class CommonProxy implements Proxy {
     }
 
     @Override
+    public void postInit() {
+
+    }
+
+    @Override
     public boolean isSinglePlayer() {
         return Minecraft.getMinecraft().isSingleplayer();
     }
