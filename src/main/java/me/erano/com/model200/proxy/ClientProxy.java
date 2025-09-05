@@ -10,9 +10,10 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 public class ClientProxy extends CommonProxy {
     @Override
     public void registerRenders() {
+        //deprecated way:
         //RenderingRegistry.registerEntityRenderingHandler(MechanicalAlleyEntity.class, new MechanicalAlleyRenderer(Minecraft.getMinecraft().getRenderManager()));
-        //RenderManager renderManager = Minecraft.getMinecraft().getRenderManager();
 
+        //new way:
         RenderingRegistry.registerEntityRenderingHandler(MechanicalAlleyEntity.class, new IRenderFactory<MechanicalAlleyEntity>() {
             @Override
             public Render<? super MechanicalAlleyEntity> createRenderFor(RenderManager manager) {
