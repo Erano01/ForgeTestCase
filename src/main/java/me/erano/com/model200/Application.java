@@ -2,13 +2,7 @@ package me.erano.com.model200;
 
 import me.erano.com.model200.entity.EntityManager;
 import me.erano.com.model200.proxy.CommonProxy;
-import net.minecraft.client.renderer.EntityRenderer;
-import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.client.resources.model.ModelResourceLocation;
-import net.minecraft.entity.passive.EntitySheep;
-import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -36,14 +30,14 @@ public class Application {
     }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent event){
-        commonProxy.init();
-    }
-
-    @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         EntityManager.registerEntities();
         commonProxy.preInit();
+    }
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event){
+        commonProxy.init();
         commonProxy.registerRenders();
     }
 
