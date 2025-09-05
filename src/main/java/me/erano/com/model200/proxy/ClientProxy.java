@@ -1,9 +1,7 @@
 package me.erano.com.model200.proxy;
 
-import me.erano.com.model200.entity.EntityManager;
 import me.erano.com.model200.entity.domain.MechanicalAlleyEntity;
 import me.erano.com.model200.entity.render.MechanicalAlleyRenderer;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
@@ -22,7 +20,4 @@ public class ClientProxy extends CommonProxy {
             }
         });
     }
-
-
-
 }

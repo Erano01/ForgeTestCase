@@ -1,5 +1,6 @@
 package me.erano.com.model200;
 
+import me.erano.com.model200.entity.EntityManager;
 import me.erano.com.model200.proxy.CommonProxy;
 import net.minecraft.client.renderer.EntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
@@ -37,11 +38,11 @@ public class Application {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         commonProxy.init();
-
     }
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        EntityManager.registerEntities();
         commonProxy.preInit();
         commonProxy.registerRenders();
     }
