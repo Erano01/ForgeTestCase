@@ -43,6 +43,7 @@ public class Application {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         commonProxy.preInit();
+        commonProxy.registerRenders();
     }
 
     @Mod.EventHandler

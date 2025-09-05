@@ -4,15 +4,25 @@ import me.erano.com.model200.entity.EntityManager;
 import me.erano.com.model200.entity.domain.MechanicalAlleyEntity;
 import me.erano.com.model200.entity.render.MechanicalAlleyRenderer;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends CommonProxy {
     @Override
     public void registerRenders() {
         //RenderingRegistry.registerEntityRenderingHandler(MechanicalAlleyEntity.class, new MechanicalAlleyRenderer(Minecraft.getMinecraft().getRenderManager()));
-        RenderManager renderManager = Minecraft.getMinecraft().getRenderManager();
+        //RenderManager renderManager = Minecraft.getMinecraft().getRenderManager();
+
+        RenderingRegistry.registerEntityRenderingHandler(MechanicalAlleyEntity.class, new IRenderFactory<MechanicalAlleyEntity>() {
+            @Override
+            public Render<? super MechanicalAlleyEntity> createRenderFor(RenderManager manager) {
+                return new MechanicalAlleyRenderer(manager);
+            }
+        });
     }
+
 
 
 }

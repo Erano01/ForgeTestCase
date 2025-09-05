@@ -1,9 +1,0 @@
-{
-  "loader": "forge:obj",
-  "flip_v": true,
-  "model": "model200:models/entity/babysheep.obj",
-  "textures": {
-    "texture0": "model200:textures/entity/babysheep.png",
-    "particle": "model200:textures/entity/babysheep.png"
-  }
-}
