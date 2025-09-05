@@ -1,5 +1,6 @@
 package me.erano.com.model200.proxy;
 
+import me.erano.com.model200.entity.EntityManager;
 import me.erano.com.model200.entity.domain.MechanicalAlleyEntity;
 import me.erano.com.model200.entity.render.MechanicalAlleyRenderer;
 import net.minecraft.client.Minecraft;
@@ -11,6 +12,7 @@ public class ClientProxy extends CommonProxy {
     public void registerRenders() {
         //RenderingRegistry.registerEntityRenderingHandler(MechanicalAlleyEntity.class, new MechanicalAlleyRenderer(Minecraft.getMinecraft().getRenderManager()));
         RenderManager renderManager = Minecraft.getMinecraft().getRenderManager();
-
     }
+
+
 }

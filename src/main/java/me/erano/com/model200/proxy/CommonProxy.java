@@ -8,6 +8,14 @@ import net.minecraft.server.MinecraftServer;
 
 public class CommonProxy implements Proxy {
 
+    public void registerRenders() {
+
+    }
+
+    public void registerEntityRenderers() {
+
+    }
+
     @Override
     public void init() {
 
@@ -42,9 +50,5 @@ public class CommonProxy implements Proxy {
     public EntityPlayer getPlayerFromHandler(INetHandler handler) {
         if(handler instanceof NetHandlerPlayServer) return ((NetHandlerPlayServer)handler).playerEntity;
         return null;
-    }
-
-    public void registerRenders() {
-
     }
 }
