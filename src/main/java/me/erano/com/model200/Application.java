@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
+//gradlew runClient --rerun-tasks
 @Mod(modid = Application.MODID, version = Application.VERSION)
 public class Application {
 
