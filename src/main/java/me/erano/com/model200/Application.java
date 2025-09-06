@@ -33,6 +33,7 @@ public class Application {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         EntityManager.registerEntities();
+        commonProxy.registerEntityRenderers();
         commonProxy.preInit();
     }
 
@@ -40,6 +41,7 @@ public class Application {
     public void init(FMLInitializationEvent event){
         commonProxy.init();
         commonProxy.registerRenders();
+        commonProxy.registerEntityRenderers();
     }
 
     @Mod.EventHandler
